@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listado de Personajes BT21</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-background">
+  <ion-list lines="full">
+    <ion-card *ngFor="let personaje of personajes">
+      <ion-card-header>
+        <ion-card-title>{{ personaje.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ personaje.descripcion }}</p>
+        <p><strong>Creador:</strong> {{ personaje.creador }}</p>
+        <p><strong>Característica Única:</strong> {{ personaje.caracteristica }}</p>
+        <!-- Agregar botones de modificar y eliminar -->
+        <ion-button color="primary" (click)="modificar(personaje)">Modificar</ion-button>
+        <ion-button color="danger" (click)="eliminar(personaje)">Eliminar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

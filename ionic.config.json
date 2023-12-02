@@ -1,0 +1,7 @@
+{
+  "name": "Honkai",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
